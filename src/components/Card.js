@@ -5,7 +5,7 @@ function Card({ image, selected, onClick }) {
                 <img alt="" src={image} className="card-face" />
                 <img 
                     alt=""
-                    src="/assets/stack.png"
+                    src="/assets/back_v1.png"
                     className="card-back"
                     onClick={onClick}
                 />

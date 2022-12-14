@@ -5,14 +5,14 @@ function shuffle() {
 
     // 8 unique pictures:
     let assets = [
-        { image: "/assets/ts.png" },
-        { image: "/assets/rust.png" },
-        { image: "/assets/react.png" },
-        { image: "/assets/node.png" },
-        { image: "/assets/next.png" },
-        { image: "/assets/js.png" },
-        { image: "/assets/html5.png" },
-        { image: "/assets/firebase.png" },
+        { image: "/assets/yoda1.png" },
+        { image: "/assets/yoda2.png" },
+        { image: "/assets/yoda3.png" },
+        { image: "/assets/yoda4.png" },
+        { image: "/assets/yoda5.png" },
+        { image: "/assets/yoda6.png" },
+        { image: "/assets/yoda7.png" },
+        { image: "/assets/yoda8.png" },
     ];
 
     // duplicating each so we have 16:
