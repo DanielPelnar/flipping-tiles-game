@@ -3,10 +3,10 @@ warning in VSCode,change the css.lint.unknownAtRules setting to ignore. */
 @import-normalize;
 
 :root {
-  --text: #f66936;
-  --card: #202426;
-  --orange: #ffa200;
-  --bg: linear-gradient(135deg, #fc2473, #f66936);
+  --text: #ec4e14;
+  --card: #1d2122;
+  --orange: #f9a006;
+  --bg: linear-gradient(135deg, #d29e0f, #f67636);
 
   --delay: 200ms;
   --rotate-0: rotateY(0deg);
