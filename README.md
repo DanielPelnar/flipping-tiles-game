@@ -1,4 +1,4 @@
-# Flipping Cards Game
+# Flipping Tiles Game
 
 **How to Play it?**
 * Simply on this link: https://flipping-tiles-game.web.app/
