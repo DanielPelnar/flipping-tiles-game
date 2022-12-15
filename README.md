@@ -1,5 +1,8 @@
 # Flipping Tiles Game
 
+### Picture Demo:
+![Screenshot 2022-12-15 at 14 26 36](https://user-images.githubusercontent.com/33129456/207887768-ab11f2ee-a583-41ac-bbc1-2422673e36e5.png)
+
 ### How to Play it?
 * Simply on this link: https://flipping-tiles-game.web.app/
 * My dog, Yoda, just turned 2 years old. Can you find and match all his photos? 
