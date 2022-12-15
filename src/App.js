@@ -9,7 +9,7 @@ function App() {
   // each turn is defined as having two clicks on two different cards:
   const [firstPick, setFirstPick] = useState(null);   // represents object defined in Card.js
   const [secondPick, setSecondPick] = useState(null); // represents object defined in Card.js
-  const [wins, setWins] = useState(0); // shows how many times you've won so far
+  const [wins, setWins] = useState(0); 
   const [disabled, setDisabled] = useState(false); 
 
   // Handler for card selection:
@@ -24,7 +24,7 @@ function App() {
   }
 
   // Handler for new turn (resets both picks and set disabled to false):
-  function handleTurn() {
+  function newTurn() {
     setFirstPick(null);
     setSecondPick(null);
     setDisabled(false);
@@ -34,11 +34,10 @@ function App() {
   // Sideffect used for selection and match handling:
   useEffect(() => {
     let timer;
-
     // Run bellow only if both cards have been picked:
     if (firstPick && secondPick) {
       // If picks are the same, mark them as "matched":
-      if (firstPick.image === secondPick.image) { // ??? why not just (firstPick === secondPick)
+      if (firstPick.image === secondPick.image) { 
         // Done by iterating over all cards and adding key-value pair matched: true 
         // for the 2 matching cards
         setCards((prevCards) => {
@@ -51,13 +50,13 @@ function App() {
           });
         });
         // New turn:
-        handleTurn();
+        newTurn();
       } else {
         // If picks not the same, we need to prevent the user from selecting more:
         setDisabled(true);
         // And after 1 second, let the user have another turn:
         timer = setTimeout(() => {
-          handleTurn();
+          newTurn();
         }, 1000);
       }
     }
@@ -67,7 +66,7 @@ function App() {
       clearTimeout(timer);
     };
 
-  }, [cards, firstPick, secondPick]); // ??? why cards
+  }, [firstPick, secondPick]); 
 
   // Sideffect for end game (when all cards have been matched):
   useEffect(() => {
@@ -76,18 +75,18 @@ function App() {
       return !card.matched;
     });
     // Game ends if everything was matched:
-    if (cards.length && notMatchedCards.length < 1) {
+    if (notMatchedCards.length < 1) {
       setWins((prevWin) => prevWin + 1);
       // create a new game: 
-      handleTurn();
+      newTurn();
       setCards(shuffle);
     }
-  }, [cards, wins]); // ??? why wins
+  }, [cards]); 
 
   // Handler for new game:
   function handleNewGame() {
     setWins(0);
-    handleTurn();
+    newTurn();
     setCards(shuffle);
   }
 

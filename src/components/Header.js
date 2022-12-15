@@ -1,10 +1,10 @@
 import { useEffect } from "react";
 
 function Header({ onClick, wins}) {
-    // Show current win count in the web title:
+    // Show current win count in the web title (in the browser tab):
     useEffect(() => {
         document.title = `Wins: ${wins}`;
-    }); // ??? doesnt have to run all the time
+    }, [wins]); 
 
     return (
         <header className="header">
