@@ -1,18 +1,19 @@
 @import-normalize;
 
 :root {
-  --text: #ec4e14;
-  --card: #1d2122;
-  --orange: #f9a006;
-  --bg: linear-gradient(135deg, #d29e0f, #f67636);
+  --text-color: #e47914;
+  --card: #1d2122bd;
+  --score-color: #d29e0f;
+  --bg: linear-gradient(140deg, #d29e0f, #f67636);
 
   --delay: 200ms;
+  --no-delay: 0ms;
   --rotate-0: rotateY(0deg);
   --rotate-90: rotateY(90deg);
   --transition: all ease-in 200ms;
 
-  --radius: 0.75rem;
-  --shadow: 1px 1px 13px #03030390;
+  --radius: 2.5rem;
+  --shadow: 1px 1px 12px #03030383;
 
   --card-width: 150px;
   --card-width-mobile: 20vw;
@@ -38,19 +39,19 @@ body {
   padding: 1rem;
   display: flex;
   overflow: auto;
-  color: var(--text);
+  color: var(--text-color);
   background: var(--bg);
   align-items: flex-start;
   justify-content: center;
   font-family: var(--font-family);
 }
 
-/* ========= Menu ======================== */
+/* ========= Header =================== */
 header {
   width: 100%;
-  height: 4rem;
+  height: 5rem;
   display: flex;
-  padding: 0.5rem;
+  padding: 0.4rem;
   align-items: center;
   background: var(--card);
   box-shadow: var(--shadow);
@@ -60,11 +61,11 @@ header {
 }
 h3 {
   margin: auto;
-  color: var(--text);
+  color: var(--text-color);
 }
 h4 {
   margin: auto;
-  color: var(--orange);
+  color: var(--score-color);
 }
 button {
   border: none;
@@ -74,15 +75,15 @@ button {
   margin: auto;
 }
 
-/* ========= Grid ========================= */
+/* ========= Grid ===================== */
 .grid {
-  gap: 1.25rem;
+  gap: 1.1rem;
   display: grid;
-  margin: 3rem auto;
+  margin: 2rem auto;
   grid-template-columns: repeat(4, auto);
 }
 
-/* ========= Card ========================= */
+/* ========= Card ===================== */
 .card {
   display: flex;
   position: relative;
@@ -98,7 +99,7 @@ button {
 }
 .card-face,
 .card-back {
-  padding: 1rem;
+  padding: 0.75rem;
   background: var(--card);
   box-shadow: var(--shadow);
   border-radius: var(--radius);
@@ -118,7 +119,7 @@ button {
 }
 .selected .card-back {
   transform: var(--rotate-90);
-  transition-delay: 0s;
+  transition-delay: var(--no-delay);
 }
 @keyframes enter {
   from {
@@ -131,7 +132,7 @@ button {
   }
 }
 
-/* ========= Mobile ===================== */
+/* ========= Mobile ================ */
 @media screen and (max-width: 720px) {
   body {
     align-items: center;
