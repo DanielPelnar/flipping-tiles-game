@@ -1,18 +1,18 @@
 # Flipping Tiles Game
 
-**How to Play it?**
+### How to Play it?
 * Simply on this link: https://flipping-tiles-game.web.app/
 * My dog, Yoda, just turned 2 years old. Can you find and match all his photos? 
 * There are 8 unique pairs of photos of my dog - in total 16 photos.
 * The goal of the game is to find the pairs.
 * GL HF!
 
-**Description**
+### Description
 * This is a memory game where you flip cards and match the same pairs of my dog.
 * A progressive web app (PWA) done in React with CSS animations
 * Deployed on Firebase.
 
-**Notes**
+### Notes
 * npx create-react-app my-app --template cra-template-pwa 
     * Creates PWA 
 * This integrates a tool called Workbox, which automatically caches and optimizes the application as PWA.
