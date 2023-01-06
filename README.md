@@ -18,6 +18,7 @@
 ### Notes
 * npx create-react-app my-app --template cra-template-pwa 
     * Creates PWA 
+* npm run build
 * This integrates a tool called Workbox, which automatically caches and optimizes the application as PWA.
 * To install PWA on a device, it is required to be served on HTTPS (secured).
 * One way how to do this is to deploy the app on Firebase.
